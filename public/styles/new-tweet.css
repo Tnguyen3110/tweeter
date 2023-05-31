@@ -1,0 +1,25 @@
+textarea {
+  width: 800px;
+  background-color: transparent;
+  border: none;
+  resize: none;
+  border-bottom: 2px solid black;
+  
+}
+
+textarea:focus {
+  outline: none;
+}
+
+button {
+background-color: blue;
+color: white;
+}
+
+.counter-tweet {
+  font-weight: 900;
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+}
+
