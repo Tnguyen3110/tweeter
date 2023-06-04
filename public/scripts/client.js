@@ -54,12 +54,12 @@ $(document).ready(() => {
 
     // Check if tweet area is empty or exceeds the character limit
     if (tweetText === "") {
-      alert("Please enter a tweet.");
+      $('#error-message').text("Please enter a tweet.").slideDown();
       return;
     }
 
     if (tweetText.length > 140) {
-      alert("Tweet must not exceed 140 characters.");
+      $('#error-message').text("Tweet must not exceed 140 characters.").slideDown();
       return;
     }
 
