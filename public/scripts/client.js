@@ -6,7 +6,9 @@
 $(document).ready(() => {
   // 
 
+
   const createTweetElement = function(tweet) {
+  
     const $tweet = `
     <article class="tweets">
           <header>
@@ -38,7 +40,7 @@ $(document).ready(() => {
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
     }
   };
 
@@ -48,25 +50,24 @@ $(document).ready(() => {
     event.preventDefault(); // Prevent form submission
 
     // Get the tweet area value
-    let tweetText = $('#tweet-text').val().trim()
-      
+    let tweetText = $('#tweet-text').val().trim();
+
     // Check if tweet area is empty or exceeds the character limit
     if (tweetText === "") {
       alert("Please enter a tweet.");
       return;
     }
-  
+
     if (tweetText.length > 140) {
       alert("Tweet must not exceed 140 characters.");
       return;
     }
-  
-  
+
+
 
 
     // Get form data
     let formData = $(this).serialize();
-    console.log(formData);
 
     //Make an AJAX request
     $.ajax({
@@ -76,7 +77,15 @@ $(document).ready(() => {
     })
       .then(function(response) {
         console.log(response);
-        // Handle the success response
+        // Handle the success responsed
+
+        // Clear the tweet area
+        $('#tweet-text').val('');
+        
+
+        loadTweets();
+
+       
       })
       .catch(function(xhr) {
         console.log(xhr.responseText);
@@ -104,6 +113,7 @@ $(document).ready(() => {
   // Call the loadTweets function
   loadTweets();
 
-  
+
+
 });
 
