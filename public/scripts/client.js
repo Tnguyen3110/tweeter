@@ -8,7 +8,7 @@ $(document).ready(() => {
 
 
   const createTweetElement = function(tweet) {
-  
+
     const $tweet = `
     <article class="tweets">
           <header>
@@ -81,11 +81,11 @@ $(document).ready(() => {
 
         // Clear the tweet area
         $('#tweet-text').val('');
-        
+
 
         loadTweets();
 
-       
+
       })
       .catch(function(xhr) {
         console.log(xhr.responseText);

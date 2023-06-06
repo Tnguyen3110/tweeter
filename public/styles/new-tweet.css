@@ -4,7 +4,7 @@ textarea {
   border: none;
   resize: none;
   border-bottom: 2px solid black;
-  
+
 }
 
 textarea:focus {
@@ -12,8 +12,8 @@ textarea:focus {
 }
 
 button {
-background-color: blue;
-color: white;
+  background-color: blue;
+  color: white;
 }
 
 .counter-tweet {
@@ -24,8 +24,12 @@ color: white;
 }
 
 #error-message {
-  display: none; /* Hide the error message initially */
-  color: red; /* Set the text color to red */
-  font-weight: bold; /* Make the text bold */
-  margin-top: 5px; /* Add some spacing from the elements above */
+  display: none;
+  /* Hide the error message initially */
+  color: red;
+  /* Set the text color to red */
+  font-weight: bold;
+  /* Make the text bold */
+  margin-top: 5px;
+  /* Add some spacing from the elements above */
 }
