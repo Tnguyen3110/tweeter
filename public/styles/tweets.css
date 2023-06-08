@@ -15,14 +15,29 @@
   justify-content: space-between;
 }
 
-.tweet-text {
+/* .tweet-text {
   border-bottom: 3px solid;
-}
+  
+} */
 
-.icons :hover {
+.icons i:hover {
   color: rgb(222, 222, 10);
 }
 
-.tweet-text {
+/* .tweet-text {
   box-shadow: 5 5 10px blue (0, 0, 0, 0.3);
+} */
+
+
+.tweets {
+  border: 3px solid black;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.tweets:hover {
+  border-bottom: 3px solid;
+
+  box-shadow: 0 10px 5px #888888;
 }

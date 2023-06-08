@@ -4,8 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(() => {
-  // 
-
 
   const createTweetElement = function(tweet) {
 
@@ -33,7 +31,6 @@ $(document).ready(() => {
           </footer>
         </article>
     `;
-
     return $tweet;
   };
 
@@ -43,7 +40,6 @@ $(document).ready(() => {
       $('#tweets-container').prepend($tweet);
     }
   };
-
 
   // Add event listener for submit
   $('form').on('submit', function(event) {
@@ -63,9 +59,6 @@ $(document).ready(() => {
       return;
     }
 
-
-
-
     // Get form data
     let formData = $(this).serialize();
 
@@ -76,16 +69,11 @@ $(document).ready(() => {
       data: formData
     })
       .then(function(response) {
-        console.log(response);
         // Handle the success responsed
-
         // Clear the tweet area
         $('#tweet-text').val('');
-
-
+        $('.counter').text(140);
         loadTweets();
-
-
       })
       .catch(function(xhr) {
         console.log(xhr.responseText);
@@ -100,7 +88,6 @@ $(document).ready(() => {
       method: 'GET'
     })
       .then(function(response) {
-
         renderTweets(response);
         // Handle the success response and process the tweets
       })
@@ -109,11 +96,7 @@ $(document).ready(() => {
         // Handle the error response
       });
   }
-
   // Call the loadTweets function
   loadTweets();
-
-
-
 });
 

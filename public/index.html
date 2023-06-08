@@ -49,10 +49,9 @@
     </div>
   </nav>
 
-
   <div class="headerContainer">
 
-    <header>
+    <header class="mainHeader">
       <div>
         <img src="/images/profile-hex.png">
       </div>
@@ -67,7 +66,7 @@
       <section class="new-tweet">
         <div id="error-message"></div>
         <h2>Compose Tweet</h2>
-        <form id="tweetForm" action="/tweets" method="POST">
+        <form id="tweetForm">
           <!-- <label for="tweet-text">What are you humming about?</label> -->
           <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
           <div class="counter-tweet">

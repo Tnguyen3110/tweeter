@@ -1,4 +1,4 @@
-header {
+.mainHeader {
   height: 400px;
   width: 100%;
   margin-top: 120px;
@@ -15,7 +15,7 @@ header {
 }
 
 @media (max-width: 768px) {
-  header {
+  .mainHeader {
     margin-right: 20px;
   }
 }
